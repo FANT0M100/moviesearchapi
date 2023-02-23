@@ -261,13 +261,13 @@ img {
 }
 
 
-/* .loader {
+.loader {
     margin: 5rem auto;
     text-align: center; }
     .loader svg {
       height: 5.5rem;
       width: 5.5rem;
-      fill: #F59A83;
+      fill: #0abf30;
       transform-origin: 44% 50%;
       animation: rotate 1.5s infinite linear; }
   
@@ -275,11 +275,5 @@ img {
     0% {
       transform: rotate(0); }
     100% {
-      transform: rotate(360deg); } } */
+      transform: rotate(360deg); } }
 
-
-   /*  <div class='loader'>
-      <svg>
-          <use href="img/icons.svg#icon-cw"</use>
-      </svg>
-   </div>     */ 

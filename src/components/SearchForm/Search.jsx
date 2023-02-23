@@ -3,7 +3,6 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from 'react-hook-form'
 import { useContext } from 'react'
 import { StoreContextMovie } from '../../App'
-import axios from 'axios'
 import MovieList from '../MovieList/MovieList'
 
 
@@ -19,21 +18,21 @@ const SearchForm = () => {
         resolver: yupResolver(schema),
     });
 
-    const axiosData = async (query) => {
+    /* const axiosData = async (query) => {
         const result = await axios(`http://www.omdbapi.com/?s=${query}&page=1&apikey=e7802e60`)
         dispachMovie({
             type: 'changePrimitiveType',
             propertyId: 'movies',
             value: result.data.Search
         })
-    }
+    } */
 
     const onSubmit = (data) => {
-        axiosData(data.movie)
+        /* axiosData(data.movie) */
         dispachMovie({
             type: 'changePrimitiveType',
             propertyId: 'query',
-            value: ''
+            value: data?.movie
            })
     }
 
@@ -51,12 +50,12 @@ const SearchForm = () => {
                     onChange: (e) => {
                        dispachMovie({
                         type: 'changePrimitiveType',
-                        propertyId: 'query',
+                        propertyId: 'inputQuery',
                         value: e.target.value
                        })
                     }
                    })}
-                   value={stataMovie?.query || ""}
+                   value={stataMovie?.inputQuery || ""}
                    name="movie"
                    type="text" 
                    id="movie-search-box" 

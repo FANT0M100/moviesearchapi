@@ -1,5 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
 import Header from "./components/Header/Header";
+import MovieInfo from "./components/Movieinfo/MovieInfo";
 import SearchForm from "./components/SearchForm/Search";
 import { movieReducer } from "./components/Stata/Reducer/Movie";
 import { movieStata } from "./components/Stata/Stata/Movie";
@@ -17,8 +18,9 @@ function App() {
   return (
     <StoreContextMovie.Provider value={{ stataMovie, dispachMovie }}>
      <div className="wrapper">
-       <Header/>
-       <SearchForm/>
+       <Header />
+       <SearchForm />
+       <MovieInfo />
      </div>
     </StoreContextMovie.Provider>
   )
