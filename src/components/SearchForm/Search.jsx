@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { useContext } from 'react'
 import { StoreContextMovie } from '../../App'
 import axios from 'axios'
+import MovieList from '../MovieList/MovieList'
 
 
 const schema = yup.object().shape({
@@ -62,19 +63,7 @@ const SearchForm = () => {
                    className="form-control" 
                    placeholder="Search movie title..."/>
                  </form>
-
-                <div className="search-list" id="search-list">
-                    
-                   {/* <div className="search-list-item">
-                        <div className="search-item-thumbnail">
-                            <img src="img.jpeg" alt="img"/>
-                        </div>
-                        <div className="search-item-info">
-                            <h4>Guardians of the galaxy vol. 2</h4>
-                            <p>2017</p>
-                        </div>
-                    </div> */}
-                </div>
+                 <MovieList/>
             </div>
         </div>
     )
