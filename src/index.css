@@ -265,8 +265,8 @@ img {
     margin: 10px auto;
     text-align: center; }
     .loader svg {
-      height: 5.5rem;
-      width: 5.5rem;
+      height: 3.5rem;
+      width: 3.5rem;
       fill: #0abf30;
       transform-origin: 44% 50%;
       animation: rotate 1.5s infinite linear; }
