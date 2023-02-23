@@ -33,7 +33,7 @@ export const MovieList = () => {
     }
 
 
-   /*  if(isLoading) {
+    if(isLoading) {
         return(
             <div className='loader'>
                 <svg>
@@ -41,7 +41,7 @@ export const MovieList = () => {
                 </svg>
             </div> 
         )
-    } */
+    }
 
     if(isError) {
         return(

@@ -18,17 +18,7 @@ const SearchForm = () => {
         resolver: yupResolver(schema),
     });
 
-    /* const axiosData = async (query) => {
-        const result = await axios(`http://www.omdbapi.com/?s=${query}&page=1&apikey=e7802e60`)
-        dispachMovie({
-            type: 'changePrimitiveType',
-            propertyId: 'movies',
-            value: result.data.Search
-        })
-    } */
-
     const onSubmit = (data) => {
-        /* axiosData(data.movie) */
         dispachMovie({
             type: 'changePrimitiveType',
             propertyId: 'query',

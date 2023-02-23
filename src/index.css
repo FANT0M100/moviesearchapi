@@ -262,7 +262,7 @@ img {
 
 
 .loader {
-    margin: 5rem auto;
+    margin: 10px auto;
     text-align: center; }
     .loader svg {
       height: 5.5rem;
