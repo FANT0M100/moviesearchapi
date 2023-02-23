@@ -24,6 +24,14 @@ export const MovieList = () => {
         stataMovie?.query && refetch()
     }, [stataMovie?.query])
 
+    const redirectHandler = (id) => {
+        dispachMovie({
+            type: 'changePrimitiveType',
+            propertyId: 'movieId',
+            value: id
+        })
+    }
+
 
    /*  if(isLoading) {
         return(
@@ -45,7 +53,7 @@ export const MovieList = () => {
         <div className="search-list" id="search-list">
             {
                 !!data?.length && data?.map((el, index) => (
-                    <a className="search-list-item" href="#" onClick={() => console.log(el?.imdbID)} key={index}>
+                    <a className="search-list-item" href="#" onClick={() => redirectHandler(el?.imdbID)} key={index}>
                         <div className="search-item-thumbnail">
                             <img src={el.Poster} alt={el.Title}/>
                         </div>

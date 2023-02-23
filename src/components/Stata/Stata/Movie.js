@@ -8,4 +8,5 @@ export const movieStata = {
     img: '/',
     year: '',
     movieinfo: [],
+    movieId: ''
 }
