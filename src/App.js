@@ -1,4 +1,5 @@
 import { createContext, useEffect, useReducer } from "react";
+import { SkeletonTheme } from "react-loading-skeleton";
 import Header from "./components/Header/Header";
 import MovieInfo from "./components/Movieinfo/MovieInfo";
 import SearchForm from "./components/SearchForm/Search";
@@ -16,6 +17,7 @@ function App() {
   }, [stataMovie.movies.length])
 
   return (
+    <SkeletonTheme baseColor="#313131" highlightColor="#525252">
     <StoreContextMovie.Provider value={{ stataMovie, dispachMovie }}>
      <div className="wrapper">
        <Header />
@@ -23,6 +25,7 @@ function App() {
        <MovieInfo />
      </div>
     </StoreContextMovie.Provider>
+    </SkeletonTheme>
   )
 }
 

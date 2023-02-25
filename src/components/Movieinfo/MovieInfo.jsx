@@ -3,6 +3,9 @@ import { useContext, useEffect } from "react";
 import { useQuery } from "react-query";
 import { StoreContextMovie } from "../../App";
 
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 const MovieInfo = () => {
 
@@ -50,17 +53,17 @@ const MovieInfo = () => {
                        <img src={data?.Poster} alt={data?.Title}/>
                     </div>
                     <div className="movie-info">
-                        <h3 className="movie-title">{data?.Title}</h3>
+                        <h3 className="movie-title">{data?.Title || <Skeleton/>}</h3>
                         <ul className="movie-misc-info">
-                            <li className="year">Year: {data?.Year}</li>
-                            <li className="rate">Ratings: {data?.Rated}</li>
-                            <li className="released">released: {data?.Released}</li>
+                            <li className="year">Year: {data?.Year || <Skeleton/>}</li>
+                            <li className="rate">Ratings: {data?.Rated || <Skeleton/>}</li>
+                            <li className="released">released: {data?.Released || <Skeleton/>}</li>
                         </ul>
-                        <p className="genre"><b>Genre:</b> {data?.Genre}</p>
-                        <p className="writer"><b>Writer:</b> {data?.Writer}</p>
-                        <p className="actors"><b>Actors:</b> {data?.Actors}</p>
-                        <p className="plot"><b>Plot:</b> {data?.Plot}</p>
-                        <p className="language"><b>Language:</b> {data?.Language}</p>
+                        <p className="genre"><b>Genre:</b> {data?.Genre || <Skeleton/>}</p>
+                        <p className="writer"><b>Writer:</b> {data?.Writer || <Skeleton/>}</p>
+                        <p className="actors"><b>Actors:</b> {data?.Actors || <Skeleton/>}</p>
+                        <p className="plot"><b>Plot:</b> {data?.Plot || <Skeleton/>}</p>
+                        <p className="language"><b>Language:</b> {data?.Language || <Skeleton/>}</p>
                     </div>
                 </div>
             </div>

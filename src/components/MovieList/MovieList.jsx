@@ -38,17 +38,6 @@ export const MovieList = () => {
            })
     }
 
-
-   /*  if(isLoading) {
-        return(
-            <div className='loader'>
-                <svg>
-                  <use href="img/icons.svg#icon-cw"/>
-                </svg>
-            </div> 
-        )
-    } */
-
     if(isError) {
         return(
             <span>Error: {error.message}</span>

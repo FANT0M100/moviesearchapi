@@ -147,6 +147,7 @@ img {
     margin: 0 auto;
     border: 4px solid var(--success);
 }
+
 .movie-info {
     text-align: center;
     color: #fff;
@@ -169,7 +170,7 @@ img {
     font-weight: 500;
 }
 .movie-info .rate {
-    background-color: #0abf30;
+   /*  background-color: #0abf30; */
     padding: 0.4rem;
     margin: 0 0.4rem;
     border-radius: 2px;
@@ -195,7 +196,8 @@ img {
     margin: 1rem auto;
 }
 .movie-info .language {
-    color: var(--success);
+   /*  color: var(--success); */
+   color: #fff;
     font-style: italic;
 }
 .movie-info .award {
