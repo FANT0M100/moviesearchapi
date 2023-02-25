@@ -30,10 +30,16 @@ export const MovieList = () => {
             propertyId: 'movieId',
             value: id
         })
+        
+        dispachMovie({
+            type: 'changePrimitiveType',
+            propertyId: 'query',
+            value: ""
+           })
     }
 
 
-    if(isLoading) {
+   /*  if(isLoading) {
         return(
             <div className='loader'>
                 <svg>
@@ -41,7 +47,7 @@ export const MovieList = () => {
                 </svg>
             </div> 
         )
-    }
+    } */
 
     if(isError) {
         return(
